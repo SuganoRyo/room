@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +14,43 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  text-align: center
+}
+
+.field {
+  margin: 20px 0 20px;
+}
+
+input {
+  width: 400px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+}
+
+.menu_bar  {
+  margin-left: 70%;
+  padding-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.menu_bar a {
+  color: white;
+}
+
+.room_sample img {
+  max-width: 300px;
+}
+
+.reserver_table {
+  border-top: none;
+}
+
+body {
+  margin: 0;
+}

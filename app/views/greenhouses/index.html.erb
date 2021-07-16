@@ -1,0 +1,61 @@
+<div class ="new_header">
+              <%= search_form_for @q, url: search_greenhouses_path do |f| %>
+              <%= f.search_field :name_or_address_or_introduction_or_price_cont, placeholder:"キーワード" %>
+              <br>
+              <%= f.submit '検索' %>
+              <% end %>
+              
+              <%= search_form_for @q, url: search_greenhouses_path do |f| %>
+              <%= f.search_field :address_cont, placeholder:"エリア" %>
+              <br>
+              <%= f.submit '検索' %>
+              <% end %>
+              </div>
+
+<div class ="main_body">
+  <body>
+    <div class = "free_sarch">
+    <p>
+    Potepan Shareで<br>まだ体験したことのない旅をしよう
+   </p>
+   
+ <%= search_form_for @q, url: search_greenhouses_path do |f| %>
+  <%= f.search_field :name_or_address_or_introduction_or_price_cont, placeholder:"エリア" %>
+
+  <div class = "search_button" ><%= f.submit "探す" %></div>
+<% end %>
+   </div>
+  </body>
+</div>
+
+<div class ="sub_body">
+  <body>
+    <h1>おすすめのエリア</h1>
+    <div class ="contain">
+      <div class ="individual_items">
+        <span>東京</span>
+      <a href ="https://c9ea7a77300e4c528e026de45c8006a6.vfs.cloud9.us-east-2.amazonaws.com/greenhouses/search?q%5Bname_or_address_or_introduction_or_price_cont%5D=%E6%9D%B1%E4%BA%AC&commit=%E6%8E%A2%E3%81%99">
+      <img src ="https://www.jukushin.com/wp-content/uploads/2012/05/350a09baa9a90589dbce421039fe274a.jpg" alt ="東京について">
+      </a>
+      </div>
+      <div class ="individual_items">
+        <span>大阪</span>
+      <a href ="https://c9ea7a77300e4c528e026de45c8006a6.vfs.cloud9.us-east-2.amazonaws.com/greenhouses/search?q%5Bname_or_address_or_introduction_or_price_cont%5D=%E5%A4%A7%E9%98%AA&commit=%E6%8E%A2%E3%81%99">
+      <img src ="https://gahag.net/img/201605/25s/gahag-0089691144-1.jpg" alt ="大阪について">
+      </a>
+      </div>
+      <div class ="individual_items">
+        <span>京都</span>
+      <a href ="https://c9ea7a77300e4c528e026de45c8006a6.vfs.cloud9.us-east-2.amazonaws.com/greenhouses/search?q%5Bname_or_address_or_introduction_or_price_cont%5D=%E4%BA%AC%E9%83%BD&commit=%E6%8E%A2%E3%81%99">
+      <img src ="https://publicdomainq.net/images/201705/06s/publicdomainq-0008766fuw.jpg" alt ="京都について">
+      </a>
+      </div>
+      <div class ="individual_items">
+        <span>札幌</span>
+      <a href ="https://c9ea7a77300e4c528e026de45c8006a6.vfs.cloud9.us-east-2.amazonaws.com/greenhouses/search?q%5Bname_or_address_or_introduction_or_price_cont%5D=%E6%9C%AD%E5%B9%8C&commit=%E6%8E%A2%E3%81%99">
+      <img src ="https://www.photock.jp/photo/middle/photo0000-1892.jpg" alt ="札幌について">
+      </a>
+      </div>
+    </div>
+  </body>
+</div>

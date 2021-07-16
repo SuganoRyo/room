@@ -1,0 +1,47 @@
+<h3>新規予約</h3>
+  
+  <%= render "shared/error", obj: @reserver %>
+          
+     <%= form_for @reserver do |f| %>
+     <%= f.hidden_field :user_id, value: current_user.id %>
+     <%= f.hidden_field :greenhouse_id, value: @greenhouse.id %>
+     <table class = "reserver_table" >
+      <tr>
+  <th>サンプルイメージ</th>
+  <td class = "room_sample">
+   <%= image_tag @greenhouse.image %>
+   </td>
+   </tr>
+   
+   <tr>
+    <th>料金</th>
+    <td><%= @greenhouse.price %>円/日</td>
+    </tr>
+    
+         <tr>
+           <th><%= f.label :開始日 %></th>
+           <td><%= f.date_field :start, class:"start-content" %></td>
+         </tr>
+         
+         <tr>
+           <th><%= f.label :終了日 %></th>
+           <td><%= f.date_field :end, class:"end-content" %></td>
+         </tr>
+         
+         <tr>
+           <th><%= f.label :人数 %></th>
+           <td><%= f.number_field :number, class:"number-content" %></td>
+         </tr>
+       </table>
+       <div>
+         <ul>
+           <li><%= f.submit "予約を完了する" %></li>
+         </ul>
+       </div>
+     <% end %>
+  
+     <div>
+       <ul>
+         <li><%= link_to "予約一覧に戻る", :reservers %></li>
+       </ul>
+     </div>

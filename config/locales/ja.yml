@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+      user:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワードの再入力
+      greenhouse:
+        name: ルーム名
+        introduction: 紹介
+        price: 料金
+        address: 住所
+        image: 画像
