@@ -23,7 +23,7 @@
              <td><%= reserver.start %></td>
              <td><%= reserver.end %></td>
              <td><%= reserver.number %></td>
-             <td><%= reserver.total %></td>
+             <td><%= (reserver.end - reserver.start).to_i* reserver.greenhouse.price * reserver.number %>円</td>
              <td>
               <%= link_to "参照", reserver %>
             </td>

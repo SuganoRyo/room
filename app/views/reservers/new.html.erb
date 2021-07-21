@@ -9,15 +9,13 @@
       <tr>
   <th>サンプルイメージ</th>
   <td class = "room_sample">
-   <%= image_tag @greenhouse.image %>
+   <%= image_tag @reserver.greenhouse.image %>
    </td>
    </tr>
-   
    <tr>
     <th>料金</th>
-    <td><%= @greenhouse.price %>円/日</td>
+    <td><%= @reserver.greenhouse.price %>円/日</td>
     </tr>
-    
          <tr>
            <th><%= f.label :開始日 %></th>
            <td><%= f.date_field :start, class:"start-content" %></td>

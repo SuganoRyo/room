@@ -5,6 +5,7 @@ class ReserversController < ApplicationController
   
   def new
     @reserver = Reserver.new
+    @reserver.greenhouse = 
     @greenhouse = Greenhouse.find(params[:format])
   end
   
@@ -14,7 +15,8 @@ class ReserversController < ApplicationController
           flash[:notice] = "新規予約をしました"
           redirect_to action: :index
         else
-          render :new
+         @greenhouse = Reserver.find(params[:reserver][:greenhouse_id])
+         render :new
         end
   end
 

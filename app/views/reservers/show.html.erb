@@ -23,7 +23,7 @@
       </tr>
       <tr>
         <th>合計金額</th>
-        <td><%= @reserver.total %></td>
+        <td><%= (@reserver.end - @reserver.start).to_i* @reserver.greenhouse.price * @reserver.number %>円</td>
       </tr>
     </table>
  

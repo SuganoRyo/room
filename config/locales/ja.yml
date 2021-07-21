@@ -14,3 +14,7 @@ ja:
         price: 料金
         address: 住所
         image: 画像
+      reserver:
+        start: 開始日
+        end: 終了日
+        number: 人数
