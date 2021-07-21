@@ -11,6 +11,23 @@
   </head>
 
   <body>
+    <%= notice %>
+    <%= alert %>
+    <div class = "container">
+      <header class ="new_header">
+          <a href="https://c9ea7a77300e4c528e026de45c8006a6.vfs.cloud9.us-east-2.amazonaws.com/greenhouses">
+            <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png" alt="ロゴ">
+            </a>
+            <div class ="menu_bar">
+            <%= link_to 'ルーム新規登録', new_greenhouse_path %>
+            <%= link_to "ルーム予約一覧", reservers_path %>
+            <%= link_to "ログアウト", logout_path, method: :delete %>
+            </div>
+        </header>
     <%= yield %>
+    <footer class ="new_footer">
+          <p class = "footer_text">© 2020 POTEPAN.INC.</p>
+        </div>
+    </div>
   </body>
 </html>

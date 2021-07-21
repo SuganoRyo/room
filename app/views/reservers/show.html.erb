@@ -1,0 +1,34 @@
+<h3>予約詳細</h3>
+ 
+    <table>
+      <tr>
+        <th>ルーム名</th>
+        <td><%= @reserver.greenhouse.name %></td>
+      </tr>
+      <tr>
+        <th>イメージ</th>
+        <td class = "room_sample"><%= image_tag @reserver.greenhouse.image %></td>
+      </tr>
+      <tr>
+        <th>開始日</th>
+        <td><%= @reserver.start %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @reserver.end %></td>
+      </tr>
+      <tr>
+        <th>人数</th>
+        <td><%= @reserver.number %></td>
+      </tr>
+      <tr>
+        <th>合計金額</th>
+        <td><%= (@reserver.end - @reserver.start).to_i* @reserver.greenhouse.price * @reserver.number %>円</td>
+      </tr>
+    </table>
+ 
+    <div>
+      <ul>
+        <li><%= link_to "予約一覧に戻る", :reservers %></li>
+      </ul>
+    </div>

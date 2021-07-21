@@ -1,0 +1,39 @@
+ <h3>予約一覧</h3>
+  
+     <table>
+       <thead>
+         <tr>
+           <th>ルーム名</th>
+           <th>イメージ</th>
+           <th>開始日</th>
+           <th>終了日</th>
+           <th>人数</th>
+           <th>合計金額</th>
+           <th>参照</th>
+           <th>編集</th>
+           <th>削除</th>
+         </tr>
+       </thead>
+       
+       <tbody>
+         <% @reservers.each do |reserver| %>
+           <tr>
+             <td><%= reserver.greenhouse.name %></td>
+             <td class = "room_sample"><%= image_tag reserver.greenhouse.image %></td>
+             <td><%= reserver.start %></td>
+             <td><%= reserver.end %></td>
+             <td><%= reserver.number %></td>
+             <td><%= (reserver.end - reserver.start).to_i* reserver.greenhouse.price * reserver.number %>円</td>
+             <td>
+              <%= link_to "参照", reserver %>
+            </td>
+            <td>
+              <%= link_to "編集", [:edit, reserver] %>
+            </td>
+            <td>
+              <%= link_to "削除", reserver, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+            </td>
+           </tr>
+         <% end %>
+       </tbody>
+     </table>

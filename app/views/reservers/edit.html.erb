@@ -1,0 +1,26 @@
+<h3>予約編集</h3>
+ 
+    <%= form_for @reserver do |f| %>
+      <table>
+        <tr>
+           <th><%= f.label :開始日 %></th>
+           <td><%= f.date_field :start, class:"start-content" %></td>
+         </tr>
+         
+         <tr>
+           <th><%= f.label :終了日 %></th>
+           <td><%= f.date_field :end, class:"end-content" %></td>
+         </tr>
+         
+         <tr>
+           <th><%= f.label :人数 %></th>
+           <td><%= f.number_field :number, class:"number-content" %></td>
+         </tr>
+      </table>
+      <div>
+        <ul>
+          <li><%= f.submit "編集を完了する" %></li>
+          <li><%= link_to "予約一覧に戻る", :reservers %></li>
+        </ul>
+      </div>
+    <% end %>

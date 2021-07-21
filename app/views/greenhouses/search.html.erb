@@ -1,0 +1,33 @@
+<div class ="room_table">
+<h1>検索結果</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ルーム名</th>
+      <th>紹介</th>
+      <th>料金</th>
+      <th>住所</th>
+      <th>イメージ</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @results.each do |greenhouse| %>
+      <tr>
+        <td><%= greenhouse.name %></td>
+        <td><%= greenhouse.introduction %></td>
+        <td><%= greenhouse.price %></td>
+        <td><%= greenhouse.address %></td>
+        <td><%= image_tag greenhouse.image %></td>
+        <td><%= link_to '詳細', greenhouse %></td>
+        <td><%= link_to '更新', edit_greenhouse_path(greenhouse) %></td>
+        <td><%= link_to '削除', greenhouse, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+        <td><%= link_to '予約する', new_reserver_path(greenhouse) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'トップ', greenhouses_path %>
+</div>

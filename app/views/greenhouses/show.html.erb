@@ -1,0 +1,33 @@
+<div class ="room_details">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ルーム名:</strong>
+  <%= @greenhouse.name %>
+</p>
+
+<p>
+  <strong>紹介:</strong>
+  <%= @greenhouse.introduction %>
+</p>
+
+<p>
+  <strong>料金:</strong>
+  <%= @greenhouse.price %>
+</p>
+
+<p>
+  <strong>住所:</strong>
+  <%= @greenhouse.address %>
+</p>
+
+<p class ="room_img">
+  <strong class = "room_title">イメージ:</strong>
+  <% if @greenhouse.image.attached? %>
+  <%= image_tag @greenhouse.image %>
+  <% end %>
+</p>
+
+<%= link_to '更新', edit_greenhouse_path(@greenhouse) %> |
+<%= link_to '戻る', greenhouses_path %>
+</div>
